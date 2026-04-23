@@ -59,6 +59,53 @@
 
 都尝试了一下，得到结果是深圳市龙华区清泉路
 
+# 额外的题
+
+## 1.星空
+
+解压压缩包，得到一张图片
+
+<img width="983" height="558" alt="out" src="https://github.com/user-attachments/assets/6ff31573-4cc1-4b0b-a870-91a8f5b3eb83" />
+
+使用010 editor打开图片，搜索png文件尾16进制代码，发现后面存在类似rar压缩包的文件，提取出来
+
+<img width="1473" height="949" alt="屏幕截图 2026-04-18 181118" src="https://github.com/user-attachments/assets/50ab065f-c4d9-4259-8f5d-862ffd5b226c" />
+
+解压后，得到400多张图片，要使用专门的工具进行拼合，但是我下载失败了
+
+<img width="978" height="668" alt="屏幕截图 2026-04-22 211651" src="https://github.com/user-attachments/assets/34aec47a-ba3b-447b-9eae-8c15dde7728a" />
+
+
+## 2.rabbit
+
+解压压缩包，得到一张兔子图片，可爱捏
+
+<img width="1440" height="3200" alt="Rabbit" src="https://github.com/user-attachments/assets/4f6b4f61-015b-4759-925b-888c729a0615" />
+
+一开始以为是对文件的宽度进行了修改，但是使用010 editor打开后发现文件尾存在类似base 64的字符
+
+<img width="1464" height="933" alt="屏幕截图 2026-04-22 222833" src="https://github.com/user-attachments/assets/2d5f740c-c470-4ec6-a86a-38f0e000d422" />
+
+使用base 家族的编码进行解码，失败了
+
+后来在网上搜索，发现存在rabbit编码，在线解码，得到flag。
+
+## 3.zip套娃
+
+基础的破解压缩包密码的题目，还好没明文解密，这个是一点不会
+
+首先没一点提示，直接爆破，得到4位密码
+
+<img width="665" height="293" alt="屏幕截图 2026-04-22 223358" src="https://github.com/user-attachments/assets/ba79c2d8-511e-4672-a3e9-289bcd788681" />
+
+然后得到提示，设置掩码为1234567？？？，选择所有数字与字母，得到密码
+
+<img width="662" height="286" alt="屏幕截图 2026-04-22 223556" src="https://github.com/user-attachments/assets/738609d2-0e21-4bbe-a7a4-82e1afe16cf7" />
+
+最后得到的提示与第二层相同（不知道是不是bug），但是由于解压软件有点强，直接破解出来了（他甚至还提醒我压缩包有点问题），得到最终的flag
+
+<img width="1615" height="820" alt="屏幕截图 2026-04-22 224054" src="https://github.com/user-attachments/assets/b350e9c9-38b8-42f0-8051-a6c96cd1d155" />
+
 # 2. 工具部署
 
 ## 1. 010Editor
